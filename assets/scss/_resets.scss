@@ -1,0 +1,75 @@
+@use './variables' as *;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection{
+  background: $dark-100;
+  color: $green-100;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: $dark-100;
+  font-size: 1.6rem;
+  font-family: $font-Inter;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li{
+  list-style: none;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+button, input, textarea, select, option{
+  font-size: 1.6rem;
+  font-family: $font-Inter;
+}
+
+.logo{
+  width: 14.4rem;
+  height: 4.4rem;
+}
+
+.title-section{
+  font: $h2;
+  color: $light-100;
+
+  span{
+    color: $green-100;
+  }
+}
+
+.section{
+  padding-block: 15rem;
+}
+
+// .preload,
+.navbar,
+.mobile,
+.hero,
+.browse,
+.games,
+.control,
+.faqs,
+.order,
+.footer{
+  // opacity: 0 !important;
+}

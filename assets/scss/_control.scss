@@ -1,0 +1,109 @@
+@use './variables' as *;
+
+
+.control{
+  padding-block: 0;
+
+  .container{
+    padding: 20rem;
+  }
+
+  .title-section{
+    text-align: center;
+    margin-bottom: 7.2rem;
+  }
+
+  &__description{
+    font: $body;
+    color: $light-300;
+    margin-bottom: 4rem;
+    text-align: center;
+    display: none;
+  }
+
+  &__description2{
+    font: $body;
+    color: $light-300;
+    position: absolute;
+    top: -170px;
+  }
+
+  &__column {
+    display: flex;
+    gap: 16px;
+    position: relative;
+    aspect-ratio: 6/8;
+
+    &-01 {
+      align-self: flex-start;
+      width: 100%;
+      aspect-ratio: 0/0;
+    }
+    
+    &-01 img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      display: block;
+    }
+    
+    &-02 {
+      align-self: flex-end;
+      width: 100%;
+      aspect-ratio: 0/0;
+      position: relative;
+    }
+    
+    &-02 img {
+      width: 100%;
+      aspect-ratio: 0/0;
+      object-fit: cover;
+      display: block;
+    }
+
+    &-01,
+    &-02{
+      .box{
+        overflow: hidden;
+        margin-bottom: 16px;
+
+        img{
+          width: 100%;
+          transition: all .3s ease-in-out;
+        }
+
+        &:hover{
+          img{
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding-block: 15rem;
+
+    .container{
+      padding: 0;
+    }
+    
+    .title-section{
+      margin-bottom: 2.4rem;
+    }
+
+    &__description{
+      display: block;
+    }
+    
+    &__column {
+      flex-direction: column;
+
+      &-02{
+        p{
+          display: none;
+        }
+      }
+    }
+  }
+}

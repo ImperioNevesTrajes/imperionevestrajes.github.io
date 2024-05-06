@@ -1,0 +1,8 @@
+User-agent: Googlebot-Image
+Allow: /images-folder/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://imperionevestrajes.github.io/sitemap.xml
+Sitemap: https://www.imperionevestrajes.github.io/sitemap.xml

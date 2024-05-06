@@ -1,0 +1,63 @@
+@use './variables' as *;
+
+
+.hero{
+  background: $dark-100;
+  
+  &__intro{
+    background: url('../img/hero.png') no-repeat right bottom/contain;
+    padding-block: 20rem;
+  }
+
+  &__pre-title{
+    font: $pre-title;
+    color: $green-100;
+    text-transform: uppercase;
+    margin-bottom: 4.8rem;
+  }
+
+  &__title{
+    font: $h1;
+    color: $light-100;
+    margin-bottom: 4rem;
+  }
+  
+  &__description{
+    font: $body;
+    color: $light-300;
+  }
+
+  &__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  &__box{
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon{
+    width: 12.5rem;
+    height: 9.6rem;
+  }
+
+  &__subtitle{
+    font: $subtitle;
+    white-space: nowrap;
+    color: $light-300;
+  }
+
+  @media screen and (max-width: 1024px) {
+  
+    &__intro{
+      padding-block: 12rem;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use './variables' as *;
+
+
+.order{
+  text-align: center;
+
+  &__subtitle{
+    font: $strong;
+    color: $light-100;
+  }
+
+  &__image{
+    background: url('../img/order.png') no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: contain;
+    width: 100%;
+    max-width: 935px;
+    height: 597px;
+    margin-inline: auto;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 40rem;
+      height: 40rem;
+      position: absolute;
+      top: 0%;
+      filter: blur(512px);
+      border-radius: 50%;
+      z-index: -1;
+      opacity: .2;
+    }
+
+    &::before {
+      background: $green-100;
+      left: -5%;
+    }
+
+    &::after {
+      background: $green-100;
+      right: -5%;
+    }
+  }
+
+  .seal{
+    position: absolute;
+    top: 10rem;
+    right: 64%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+
+    &__text{
+      position: absolute;
+      z-index: 1;
+      font-family: $font-Inter;
+      font-weight: 900;
+      font-size: 2rem;
+      line-height: 106%;
+      text-align: center;
+      color: $dark-100;
+    }
+  
+    &__image{
+      width: 17.3rem;
+      height: 17.3rem;
+      animation: rotate 12s infinite linear;
+    }
+  }
+
+}

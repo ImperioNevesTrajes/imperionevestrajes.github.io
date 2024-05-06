@@ -1,0 +1,70 @@
+@use './variables' as *;
+
+
+.footer{
+  padding-top: 14rem;
+  padding-bottom: 4rem;
+
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  &__logo{
+    width: 14.4rem;
+    height: 4.4rem;
+  }
+
+  &__menu{
+    display: flex;
+    gap: 4rem;
+    text-align: center;
+  }
+  
+  &__link{
+    text-transform: uppercase;
+    font: normal normal 700 1.6rem/91% $font-Inter;
+    color: $light-300;
+    opacity: .8;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+      color: $light-100;
+      opacity: 1;
+    }
+  }
+
+  &__social{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    
+    a{
+      padding: 1rem;
+      color: $light-300;
+      transition: all .3s ease-in-out;
+
+      &:hover{
+        color: $light-100;
+        background: #202020;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+
+    .container{
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+
+    &__menu{
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+  }
+}
